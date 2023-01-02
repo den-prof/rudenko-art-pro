@@ -86,13 +86,9 @@ app.get("*", function (res, req) {
 
 const MONGO_DB_URL = `mongodb+srv://${DB_USER}:${DB_PASS}@cluster0.pn5jxqp.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
 
-mongoose.connect(MONGO_DB_URL)
-    .then(() => {
-        app.listen(process.env.PORT || port)
-    })
-    .cath(() => {
-        app.listen(process.env.PORT || port)
-    }
+
+app.listen(process.env.PORT || port)
+
 
 
 
